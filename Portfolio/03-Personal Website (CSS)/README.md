@@ -2,7 +2,7 @@
 
 This exercise will guide us to learn and experience the basic concepts of CSS in the context of an HTML project. We will start this project from the end point of the **Personal Website - HTML** exercise.
 
----
+--- 
 
 ### Look & feel of elements
 
@@ -28,7 +28,7 @@ This exercise will guide us to learn and experience the basic concepts of CSS in
   - No bottom border
   - Width in the screen of 4%
   - Margins of 100px left and right
-- Change the L&F of links
+- 
 
   - Eliminate the underlining
   - Make them bold.
