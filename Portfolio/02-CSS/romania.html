@@ -7,15 +7,44 @@
     <link rel="stylesheet" href="css/romania.css">
 </head>
 <body>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .Flag__container{
+            width: 95%;
+            height: 66vh;
+            margin: 0 auto;
+
+            & div{
+                width: 100%;
+                height: 33%;
+
+            }
+
+            & .Top {
+                background-color: red;
+            }
+
+            & .Mid {
+                background-color: blue;
+            }
+
+            & .Bot {
+                background-color: yellow;
+            }
+        }
+
+    </style>
+
     <h1>Romanian flag</h1>
-    <div>
-        <p>Top</p>
-    </div>
-    <div>
-        <p>Mid</p>
-    </div>
-    <div>
-        <p>Bot</p>
+
+    <div class="Flag__container">
+        <div class="Top"></div>
+        <div class="Mid"></div>
+        <div class="Bot"></div>
     </div>
 </body>
 </html>
