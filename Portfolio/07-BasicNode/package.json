@@ -1,0 +1,17 @@
+{
+  "name": "07-basicnode",
+  "version": "1.0.0",
+  "description": "This is the activity number 7 for my web development class",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donovan Eliam Aguilar Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "star-wars-quotes": "^1.0.2",
+    "superheroes": "^4.0.0",
+    "supervillains": "^4.0.0"
+  }
+}
