@@ -3,12 +3,13 @@
     generate the Fibonacci sequence to that number or to the Nth number.
 */
 // This array will keep memory of the previous fibonacci numbers
-var memo = {};
+var memo = {1:1,2:1};
 function fibonacci() {
   "use strict";
   var n = document.getElementById("num").value;
   var val = f(n);
-  return val;
+
+  document.getElementById("result").innerHTML = val;
 }
 
 function f(n) {
@@ -18,10 +19,14 @@ function f(n) {
     value = memo[n];
   } else {
     //TODO: Implement the fibonacci function here!
-
-    memo[n] = value;
+    i = 3;
+    while (i <=n){
+      if (memo[i] === undefined){ 
+        memo[i] = memo[i-1] + memo[i-2];
+      } 
+      i++;
+    } 
   }
-
-  return value;
+  return memo[n];
 }
 console.log(fibonacci(15));

@@ -15,10 +15,15 @@
             var id = document.getElementById("num");
             var number = parseInt(document.getElementById("num").value);
             var maxNum = parseInt(1299827);
-            if (number < maxNum && !isNaN(number)) {
+            if (number < maxNum && !isNaN(number) && number > 0) {
                 for (var i = number + 1; i < maxNum; i++) {
                     //TODO: check if the current number is a prime or not
                     // If it is, then return it
+                    if (isPrime(i)) {
+                        document.getElementById("result").innerHTML = i;
+                        break;
+                    }
+
                     continue;
                 }
             } else {
@@ -43,6 +48,9 @@
             <input type="text" id="num" />
             <button id="btn" onclick="checkPrime();return false">
                 Click To Get Next Prime Number</button>
+            <br>
+            <span>The next prime number is:</span>
+            <span id="result"></span>
         </div>
     </form>
 </body>
