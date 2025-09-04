@@ -17,6 +17,8 @@
             width: 95%;
             height: 66vh;
             margin: 0 auto;
+            display: flex;
+            flex-direction: row;
 
             & div{
                 width: 100%;
@@ -25,15 +27,21 @@
             }
 
             & .Top {
-                background-color: red;
-            }
-
-            & .Mid {
+                height: 100%;
+                width: 33%;
                 background-color: blue;
             }
 
-            & .Bot {
+            & .Mid {
+                height: 100%;
+                width: 33%;
                 background-color: yellow;
+            }
+
+            & .Bot {
+                height: 100%;
+                width: 33%;
+                background-color: red;
             }
         }
 

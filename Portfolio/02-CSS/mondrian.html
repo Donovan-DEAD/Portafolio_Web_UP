@@ -5,8 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mondrian</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .Container {
+            display: grid;
+            width: 80vmin;
+            height: 80vmin;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 12px;
+            background-color: #000;
+            border: 12px solid #000;
+        }
+
+        .first-square {
+            background-color: red; 
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+
+        .second-square {
+            background-color: white; 
+            grid-column: 3 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+        .third-square {
+            background-color: white;
+            grid-column: 1 / span 2;
+            grid-row: 3 / span 3;
+        }
+
+        .fourth-square {
+            background-color: blue;
+            grid-column: 3 / span 2;
+            grid-row: 3 / span 2;
+        }
+
+        .fifth-square {
+            background-color: red; 
+            grid-column: 3 / span 2;
+            grid-row: 5 / span 1;
+        }
+
+        .sixth-square {
+            background-color: green; 
+            grid-column: 5 / span 1;
+            grid-row: 3 / span 1;
+        }
+
+        .seventh-square {
+            background-color: yellow;
+            grid-column: 5 / span 1;
+            grid-row: 4 / span 1;
+        }
+
+        .eighth-square {
+            background-color: white;
+            grid-column: 5 / span 1;
+            grid-row: 5 / span 1;
+        }
+    </style>
 </head>
 <body>
-    <h1>Mondrian</h1>
+    <div class="Container">
+        <div class="first-square"></div>
+        <div class="second-square"></div>
+        <div class="third-square"></div>
+        <div class="fourth-square"></div>
+        <div class="fifth-square"></div>
+        <div class="sixth-square"></div>
+        <div class="seventh-square"></div>
+        <div class="eighth-square"></div>
+    </div>
 </body>
 </html>
