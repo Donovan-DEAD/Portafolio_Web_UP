@@ -122,18 +122,20 @@ a{
 }
 
 .cloud {
-  position: absolute;
   width: 150px;
+  position: sticky;
+  z-index: -2;
+  background-color: transparent;
 }
 
 .top-cloud {
   top: 40px;
-  right: 300px;
+  right: 30px;
 }
 
 .bottom-cloud {
-  top: 150px;
-  left: 250px;
+  bottom: 100px;
+  left: 20px;
 }
 
 .team-row {
