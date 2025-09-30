@@ -1,7 +1,10 @@
 import { randomSupervillain } from 'supervillains'
 import { randomSuperhero } from 'superheroes'
+import { sw } from 'star-wars-quotes'
 
 
+console.log(sw())
+console.log()
 
 console.log("Superhero to fight: ",randomSuperhero())
 console.log("Supervillian to fight: ",randomSupervillain())
