@@ -1,0 +1,17 @@
+{
+  "name": "10-expressejs",
+  "version": "1.0.0",
+  "description": "This exercise will ilustrate how do we use EJS to create dynamic content using Express.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
