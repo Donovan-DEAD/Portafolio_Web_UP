@@ -1,44 +1,71 @@
-html {
-    min-height: 100%;
-    position: relative;
-}
-
 body {
-    background-color: beige !important;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h2 {
-    color: red;
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form input,
-select {
-    border-style: none;
-}
-
-input[type=text]:focus {
-    border: 4px solid #c9b220;
-}
-
-.header {
-    position: relative;
-    height: 100vh;
-    min-height: 500px;
-    background-image: url(../images/middle_earth.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-    border: none;
-}
-
-.header .overlay .title {
-    font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (1200 - 320)));
-    font-weight: bold;
+h1 {
     text-align: center;
-    color: whitesmoke;
-    text-shadow: -1px 1px 0 #000,
-        1px 1px 0 #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-dark {
+    background-color: #343a40;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #ccc;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.display-3 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.secret-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }

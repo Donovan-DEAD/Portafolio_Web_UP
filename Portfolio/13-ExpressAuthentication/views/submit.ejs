@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <h1>Submit a Secret</h1>
+
+  <form action="/api/submit" method="POST">
+    <div class="form-group">
+      <label for="secret">Your Secret</label>
+      <textarea class="form-control" name="secret" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+
+</div>
+
+<%- include('partials/footer') %>
