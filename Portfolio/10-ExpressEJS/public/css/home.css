@@ -1,0 +1,37 @@
+body {
+    background-color: #FAF3E0; /* Light, warm cream */
+    font-family: sans-serif;
+    color: #333333; /* Dark text */
+}
+
+h1, h2 {
+    color: #333333; /* Dark text */
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin-bottom: 20px;
+    border: 1px solid #C8B7A6;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.post-list h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.post-list p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.post-list a {
+    text-decoration: none;
+    color: #333333; /* Dark text */
+    font-weight: bold;
+}

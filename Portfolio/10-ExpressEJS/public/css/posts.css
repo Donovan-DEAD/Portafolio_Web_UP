@@ -1,0 +1,15 @@
+body {
+    background-color: #FAF3E0; /* Light, warm cream */
+    font-family: 'Courier New', Courier, monospace;
+    color: #333333; /* Dark text */
+}
+
+h1, h2 {
+    color: #333333; /* Dark text */
+}
+
+.post {
+    border: 1px solid #C8B7A6;
+    padding: 10px;
+    margin-bottom: 10px;
+}
