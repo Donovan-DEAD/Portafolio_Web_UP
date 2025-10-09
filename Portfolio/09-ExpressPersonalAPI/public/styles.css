@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+.form_greet {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.form_greet input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.form_greet input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form_greet input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+#list_of_greetings {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+}
+
+#list_of_greetings a {
+    text-decoration: none;
+    color: #333;
+}
+
+#list_of_greetings li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+#list_of_greetings li:hover {
+    transform: scale(1.02);
+}
+
+.wazzup-container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Task list styles */
+#task-list {
+    list-style: none;
+    padding: 0;
+    width: 400px;
+}
+
+#task-list li {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#task-list li strong {
+    color: #337ab7;
+}
+
+/* Task form styles */
+.form_task {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_task h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form_task input[type="text"],
+.form_task textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.form_task input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form_task input[type="submit"]:hover {
+    background-color: #286090;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-btn:hover {
+    opacity: 0.7;
+}

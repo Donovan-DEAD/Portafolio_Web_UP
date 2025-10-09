@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express test</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <% if (locals.error) { %>
+        <h3>
+            <%= error %>
+        </h3>
+        <% } %>
+            <form action="/greet" method="get" class="form_greet">
+                Register:
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="submit" value="go next">
+            </form>
+
+            <ul id="list_of_greetings">
+                <% if(locals.names){ %>
+                    <% names.forEach(name => { %>
+                        <a href="/greet?name=<%= name %>">
+                            <li>
+                                <%= name %>
+                            </li>
+                        </a>
+                    <% }) %>
+                <% } %>
+            </ul>
+
+
+            <h1>Todo list</h1>
+            <ol id="task-list">
+                <% if(locals.tasks){ %>
+                    <% tasks.forEach((task, index) => { %>
+                        <li style="display:flex; flex-direction: row; margin-right: 10px; justify-content: space-between; align-content: center;">
+                            <span><strong><%= task.title %></strong>: <%= task.description %></span>
+                            
+                            <span style="display: flex; flex-direction: row; align-content: center; justify-content: center; gap: 10px;">
+                                
+                                <button class="move-btn-up" data-task-index="<%= index %>">
+                                    <img style="width:40px;" src="/icons/flecha_arriba.svg" alt="Up arrow">
+                                </button>
+                                
+                                <button class="move-btn-down" data-task-index="<%= index %>">
+                                    <img style="width:40px;transform: scale(-1,-1);" src="/icons/flecha_arriba.svg" alt="Down arrow">
+                                </button>
+                                
+                                <button class="delete-btn" data-task-index="<%= index %>">
+                                    <img style="width:20px;" src="/icons/cruz.svg" alt="Delete">
+                                </button>
+                            </span>
+                        </li>
+                    <% }) %>
+                <% } %>
+            </ol>
+
+            <form action="/task" method="post" class="form_task">
+                <h2>Add a new task</h2>
+                <input type="text" name="title" placeholder="Task title" required>
+                <textarea name="description" placeholder="Task description" required></textarea>
+                <input type="submit" value="Add task">
+            </form>
+
+            <script>
+                document.querySelectorAll('.delete-btn').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const taskIndex = button.dataset.taskIndex;
+                        fetch('/task', {
+                            method: 'DELETE',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ index: taskIndex })
+                        }).then(()=>{
+                            location.reload();
+                        });
+                    });
+                });
+
+                document.querySelectorAll('.move-btn-up').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const taskIndex = button.dataset.taskIndex;
+                        fetch('/task', {
+                            method: 'put',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ index: taskIndex , action:"up"})
+                        }).then(()=>{
+                            location.reload();
+                        });
+                    });
+                });
+
+                document.querySelectorAll('.move-btn-down').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const taskIndex = button.dataset.taskIndex;
+                        fetch('/task', {
+                            method: 'put',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ index: taskIndex , action:"down"})
+                        }).then(()=>{
+                            location.reload();
+                        });
+                    });
+                });
+            </script>
+</body>
+
+
+
+</html>
