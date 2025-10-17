@@ -47,7 +47,7 @@ passport.use(new GoogleStrategy({
   callbackURL: config_creds.web.redirect_uris[0]
   },
   async (accessToken, refreshToken, profile, cb) => {
-    console.log(profile);
+
     const user = await User.findOne({ googleid: profile.id })
 
     if (user) {
@@ -163,7 +163,6 @@ apiRouter.post("/submit", async(req, res) => {
 apiRouter.get("/auth/google", passport.authenticate("google", { scope: ["profile", "email", "openid"] }));
 
 apiRouter.get("/auth/google/secrets", passport.authenticate("google", { failureRedirect: "/" }), (req, res)=>{
-  console.log(req.user);
   res.redirect("/secrets");
 })
 

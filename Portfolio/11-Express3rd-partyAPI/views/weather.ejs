@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The temperature in <%= city %> is <%= temp %> degrees Celsius.</h1>
+        <p>The weather is currently <%= weatherDescription %></p>
+        <img src="<%= imageURL %>" alt="Weather icon">
+        <br>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
